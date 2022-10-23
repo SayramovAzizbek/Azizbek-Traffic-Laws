@@ -39,7 +39,7 @@ let levelData = [];
 
 let gameScoreCount = 0;
 let gameErrorCounter = 0;
-
+gameScoreCountText.textContent = `Score: ${gameScoreCount}`;
 // ! Timer count down
 let globalTime = 0;
 function setTimer(startTime) {
