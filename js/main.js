@@ -187,7 +187,7 @@ gameCardList.addEventListener("click", (evt) => {
     findedItem.style.backgroundColor = "red";
     setTimeout(() => {
       findedItem.style.backgroundColor = "transparent";
-    }, 3000);
+    }, 5000);
     // ! Check, If correct answer or not
     if (cardId == gameQuestionText.dataset.qestionId) {
       let megaSortedData = sortedData.filter((item) => item !== cardId);
@@ -196,7 +196,8 @@ gameCardList.addEventListener("click", (evt) => {
       gameScoreCountText.textContent = `Score: ${gameScoreCount}`;
       // findedItem.classList.add("game-card-box--off");
       cardRender(levelData);
-      findedItem.style.backgroundColor = "green";
+      //   findedItem.style.backgroundColor = "green";
+      alert("Topdingiz");
     } else {
       //   findedItem.classList.add("game-card-box--off");
       gameScoreCount--;
