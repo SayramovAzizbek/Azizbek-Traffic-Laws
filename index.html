@@ -17,20 +17,61 @@
             <div class="container">
                 <div class="enter-game-box">
                     <form class="enter-game-form">
-                        <select class="choose_level-select game-enter-select" name="choose_level">
-                            <option value="choose-level" selected disabled>Choose level</option>
+                        <select class="choose_level-select game-enter-select" name="choose_level" required>
+                            <option value="" selected disabled>Choose level</option>
                             <option value="easy">Easy</option>
                             <option value="medium">Medium</option>
                             <option value="hard">Hard</option>
                         </select>
-                        <select class="choose_time-select game-enter-select" name="choose_time">
-                            <option value="choose-time" selected disabled>Choose time</option>
-                            <option value="5">5 minutes</option>
+                        <select class="choose_time-select game-enter-select" name="choose_time" required>
+                            <option value="" selected disabled>Choose time</option>
+                            <option value="1">5 minutes</option>
                             <option value="10">10 minutes</option>
                             <option value="15">15 minutes</option>
                         </select>
-                        <button class="enter-game-btn" type="submit">Enter</button>
+                        <div class="enter-game-btn-box">
+                            <button class="enter-game-btn" type="submit">Enter</button>
+                            <button class="about-game-btn" type="button">About Game </button>
+
+                        </div>
                     </form>
+                </div>
+                <div class="game-introduce-box">
+                    <div class="game-introduce-part">
+                        <h3 class="game-introduce-title">About Game</h3>
+                        <p class="game-introduce-text">1) Bu o'yin Yo'l harakati qoidalari haqida, siz bu o'yinda
+                            o'zingizga
+                            mos darajani tanlab va
+                            o'zingizga yetarli vaqt ni tanlab olishingiz mumkin va o'yin boshlanadi.
+                        </p>
+                        <p class="game-introduce-text">2) Bizda 3 ta
+                            daraja
+                            bor bular: Easy, Medium, Hard
+                        </p>
+                        <p class="game-introduce-text">3) O'zingizga mos vaqt ni tanlasangiz bo'ladi ular:
+                            5 daqiqa, 10 daqiqa, 15 daqiqa.
+                        </p>
+                        <p class="game-introduce-text">4) Agar siz o'yin
+                            davomida to'g'ri javob topsangiz 2 ball qo'shib boriladi, topa olmasangiz esa -1 ball dan
+                            ayrib
+                            boriladi.
+                        </p>
+                        <p class="game-introduce-text">5) O'yin davomida sizga umumiy hisobda 5 ta imkoniyat
+                            beriladi, agar 5 marta noto'g'ri javobdan so'ng avtomatik tarzda o'yin tugaydi va
+                            <strong>GAME
+                                IS OVER</strong>
+                            yozuvi chiqadi, va vaqt tugagandan keyin esa <strong>TIME IS OUT</strong> yozuvi
+                            chiqadi va
+                            agar siz hamma
+                            yo'l harakati belgilarini topsangiz unda <strong>YOU WIN</strong> yozuvi chiqadi.
+                        </p>
+                        <p class="game-introduce-text">6) Savollar har to'g'ri
+                            javob topganingizda savollar almashib boradi.
+                        </p>
+                        <div class="about-game-close-btn-box">
+                            <button class="about-game-close-btn" type="button">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

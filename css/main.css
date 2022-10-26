@@ -9,11 +9,12 @@
 .enter-game-box {
     max-width: 450px;
     margin: 170px auto 305px auto;
+    /* margin: 50px auto 0 auto; */
     padding: 30px 10px;
-    box-shadow: 0px 1px 15px 15px #223c5033;
     border-radius: 20px;
     background: #4ac6f1;
     background: linear-gradient(287deg, #4ac6f1 0%, #26ffb7 100%);
+    box-shadow: 0px 1px 15px 15px #223c5033;
 }
 
 .enter-game-form {
@@ -46,7 +47,9 @@
     margin-bottom: 30px;
 }
 
-.enter-game-btn {
+.enter-game-btn,
+.about-game-btn,
+.about-game-close-btn {
     padding: 10px 50px;
     font-weight: 700;
     font-size: 18px;
@@ -60,6 +63,83 @@
 .enter-game-btn:hover {
     color: #000;
     background-color: #fff;
+}
+
+.about-game-btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.game-introduce-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    /* margin-top: 50px; */
+    /* padding: 20px 30px 10px 30px;
+    background: linear-gradient(180deg, #4ac6f1 0%, #26ffb7 100%);
+    box-shadow: 0px 1px 15px 15px #223c5033;
+    border-radius: 20px; */
+    animation: slideup 1s 1;
+}
+
+.game-introduce-part {
+    max-width: 800px;
+    margin: 150px auto 0 auto;
+    padding: 20px 30px 10px 30px;
+    background: linear-gradient(180deg, #4ac6f1 0%, #26ffb7 100%);
+    box-shadow: 0px 1px 15px 15px #223c5033;
+    border-radius: 20px;
+}
+
+@keyframes slideup {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.game-introduce-title {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.game-introduce-text {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.game-introduce-text strong {
+    color: #f00;
+}
+
+.game-introduce-text strong:last-child {
+    color: #080;
+}
+
+.about-game-close-btn-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-game-close-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
 }
 
 #main-game-box {
@@ -92,6 +172,7 @@
 .game-user-chosen-level-text {
     font-size: 30px;
     color: #edfb36;
+    text-align: center;
 }
 
 .game-time-text--over {
@@ -140,7 +221,6 @@
 }
 
 .game-card-list::-webkit-scrollbar-thumb {
-    background: #4ac6f1;
     background: linear-gradient(287deg, #f1ca4a 20%, #19d200 100%);
     border-radius: 20px;
 }
@@ -228,4 +308,10 @@
     border-radius: 20px;
     font-weight: 700;
     font-size: 20px;
+}
+
+@media only screen and (max-width:576px) {
+    .game-introduce-part {
+        margin: 0px auto 0 auto;
+    }
 }
