@@ -64,7 +64,7 @@ enterGameForm.addEventListener("submit", (evt) => {
   }
 
   if (
-    chooseTimeSelect.value !== "1" &&
+    chooseTimeSelect.value !== "5" &&
     chooseTimeSelect.value !== "10" &&
     chooseTimeSelect.value !== "15"
   ) {
@@ -78,7 +78,7 @@ enterGameForm.addEventListener("submit", (evt) => {
 
 // ! Choose level by select and slice 0 to 31
 function selectedEasyLevel(roadSymbol) {
-  const gameEasyLevel = roadSymbol.slice(0, 5);
+  const gameEasyLevel = roadSymbol.slice(0, 31);
   sortedData = gameEasyLevel.map((item) => item.id);
   return gameEasyLevel;
 }
@@ -176,25 +176,25 @@ gameCardList.addEventListener("click", (evt) => {
   if (evt.target.matches(".game-card-item")) {
     const cardId = Number(evt.target.dataset.cardId);
     let findedItem = evt.target;
-    findedItem.style.backgroundColor = "red";
-    setTimeout(() => {
-      findedItem.style.backgroundColor = "transparent";
-    }, 5000);
+
     // ! Check, If correct answer or not
     if (cardId == gameQuestionText.dataset.questionId) {
       let megaSortedData = sortedData.filter((item) => item !== cardId);
       sortedData = [...megaSortedData];
       gameScoreCount += 2;
       gameScoreCountText.textContent = `Score: ${gameScoreCount}`;
-      // findedItem.classList.add("game-card-box--off");
+      // findedItem.style.backgroundColor = "green";
       cardRender(levelData);
-      //   findedItem.style.backgroundColor = "green";
       alert("Topdingiz");
     } else {
-      //   findedItem.classList.add("game-card-box--off");
       gameScoreCount--;
       gameErrorCounter++;
       gameScoreCountText.textContent = `Score: ${gameScoreCount}`;
+
+      findedItem.style.backgroundColor = "red";
+      setTimeout(() => {
+        findedItem.style.backgroundColor = "transparent";
+      }, 5000);
 
       if (gameErrorCounter == 5) {
         gameOverModal.classList.add("d-flex");
